@@ -6,7 +6,7 @@ var password = document.getElementById("password");
 var element = document.getElementById("demo");
 
 
-if (username.value == "Tywayne" && password.value == "12345")
+if (username.value == "tywaynebuchanan@gmail.com" && password.value == "12345")
 {
 	window.open('success.html');
 	document.getElementById("username").value="";
