@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register User</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="~bulma-badge/dist/css/bulma-badge.min.css" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+<div class="container">
+		<section class="hero is-link">
+			<div class="hero-body">
+				<div class="container">
+					<h1 class="title">Register User</h1>
+				</div>
+				<div class="container">
+					<h1 class="subtitle">Let's get <br >
+						you on board</h1>
+				</div>
+			</dir>
+		</section>
+		<div class="appear space" id="error_blank">
+			<article class="message is-danger">
+  				<div class="message-header">
+    				<p>Important1</p>
+    				<button class="delete pointer" aria-label="delete"  onclick="removeMessage()" ></button>
+  					</div>
+  					<div class="message-body">
+    				You did not enter the following:
+    				<p><strong>Name</strong></p>
+    				<p><strong>Your Email Address</strong></p>
+    				<p><strong>Password</strong></p>
+    				<p><strong>Confirm Password</strong></p>
+  				</div>
+			</article>
+		</div>
+
+		<form>
+			<div class="field column">
+				<label class="label space">Name</label>
+				<div class="control has-icons-left" >
+					<input type="text" class="input" name="name" id="name" placeholder="Please enter the your username" data-tooltip="Tooltip Text" onchange="myfunction1(this.value)">
+					<span class="icon is-small is-left">
+		      			<i class="fas fa-user"></i></span>
+				</div>
+
+				<dir id = "error_name" class ="appear">
+					<div class="notification is-danger">
+					User name can not be blank
+					</div>
+				</dir>
+				<div class="field ">
+				<label class="label space">Email</label>
+				<div class="control has-icons-left " >
+					<input type="email" class="input" name="emailfield" id="email" placeholder="Please enter the your username" onchange="myfunction2(this.value)">
+					<span class="icon is-small is-left">
+		      			<i class="fas fa-envelope-open-text"></i></span>
+				</div>
+				<dir id = "error_email" class ="appear">
+					<div class="notification is-danger">
+					Invalid Email format. Please re-enter
+					</div>
+				</dir>
+				<label class="label space">Password</label>
+				<div class="control has-icons-left">
+					<input type="password" class="input" name="pwd" id="pwd" placeholder="Please enter your password" onchange="myfunction3(this.value)">
+					<span class="icon is-small is-left">
+		      		<i class="fas fa-key"></i></span>
+				</div>
+				<dir id = "error_lgt" class ="appear" >
+					<div class="notification is-danger">
+					The Password does is not strong
+					It should contain:
+					Longer that 6 characters
+					1 Upper Case letter
+					1 Lower Case letter
+					1 Numeric Digit 
+
+					</div>
+				</dir>
+
+				<label class="label space">Re-enter Password</label>
+				<div class="control has-icons-left">
+					<input type="password" class="input" name="pwd" id="con_pwd" placeholder="Please enter your password" onchange="myfunction4(this.value)">
+					<span class="icon is-small is-left">
+		      		<i class="fas fa-key"></i></span>
+				</div>
+				<dir id = "error_pwd" class ="appear">
+					<div class="notification is-danger">
+					The password you entered does not match. Please re-enter
+					</div>
+				</dir>
+			</div>
+
+			<div class="container">
+				<div class="space">Registration Progress
+				<progress class="progress is-link" id="progress" value="0" max="100">15%</progress>
+			</div>
+		</div>
+
+			<div class="field">
+			  		<div class="control">
+						<a class="button is-fullwidth is-link is-medium is-rounded" data-badge="8" onclick="return RegValidate()">Register</a>
+					</div>
+				</div>
+			</div>
+	</form>
+</div>
+	
+	<dir id = "demo" class ="appear">
+		<div class="notification is-danger"> 	
+			Invalid Login Information. Please re-enter
+		</div>
+	</dir>
+
+	<div>
+		<hr>
+	</div>
+		
+	<div class="has-text-centered">
+			<p> Or Register in with</p>	
+	</div>
+
+	<div>
+		<hr>
+	</div>
+	<div class="center-btn ">
+				<div class="field is-grouped">
+			  		<div class="control">
+			  		<button type="button"class="button is-link" value="Register" onclick="return RegValidate()"><span><i class="fab fa-google-plus"></i></span> Google</button>
+			  	</div>
+			  	<div class="field is-grouped">
+			  		<div class="control">
+			  		<button type="reset"class="button is-link is-light" value="Cancel Registration" onclick ="return HomePage()">
+		      		<i class="fab fa-facebook-square"></i> Facebook</button>
+			  	</div>
+			</div>
+		</div>
+	</div>
+	<div class="has-text-centered space">
+		Already have an Account? <a href="index.html">Sign In</a>	
+	</div>
+</body>
+</html>

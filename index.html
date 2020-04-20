@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+
+
+<div class="container">
+		<section class="hero is-link">
+			<div class="hero-body">
+				<div class="container">
+					<h1 class="title">Login</h1>
+				</div>
+				<div class="container">
+					<h1 class="subtitle">Welcome back <br >
+						please login <br >
+					to your account</h1>
+				</div>
+			</dir>
+		</section>
+
+
+<div class="container space">
+	
+	<div class="notification is-success is-light has-text-centered">
+ 
+		Your password has been saved
+</div>
+
+
+</div>
+		<form>
+			<div class="field ">
+				<label class="label">Username</label>
+				<div class="control has-icons-left " >
+					<input type="text" class="input is-medium" name="username" id="username" placeholder="Please enter the your username">
+					<span class="icon is-small is-left">
+		      			<i class="far fa-user"></i></span>
+				</div>
+				<label class="label">Password</label>
+				<div class="control has-icons-left">
+					<input type="password" class="input is-medium" name="pwd" id="password" placeholder="Please enter your password">
+					<span class="icon is-small is-left">
+		      		<i class="fas fa-key"></i></span>
+				</div>
+			</div>
+				<div class="space has-text-right">
+					<a href="fpwd.html">Forget Password?</a>
+				</div>
+
+			<div class="container">
+					  	<div class="field">
+					  		<div class="control">
+								<a class="button is-fullwidth is-link is-medium is-rounded" id="lgbtn" onclick="return checkForm()">Login</a>
+							</div>
+						</div>
+		  		</div>
+	</form>
+</div>
+
+	<div class="container">
+		<dir id = "demo" class ="appear">
+			<div class="notification is-danger is-light">
+				You are unable to login at this time. Please wait 30 seconds.
+			</div>						
+		</dir>
+	</div>
+
+	<div>
+		<hr>
+	</div>
+		
+	<div class="has-text-centered">
+			<p> Or Login in with</p>	
+	</div>
+
+	<div>
+		<hr>
+	</div>
+		<div class="center-btn ">
+				<div class="field is-grouped">
+			  		<div class="control">
+			  		<button type="button"class="button is-link" value="Register" onclick="return RegValidate()"><span><i class="fab fa-google-plus"></i></span> Google</button>
+			  	</div>
+			  	<div class="field is-grouped">
+			  		<div class="control">
+			  		<button type="reset"class="button is-link is-light" value="Cancel Registration" onclick ="return HomePage()">
+		      		<i class="fab fa-facebook-square"></i>Facebook</button>
+			  	</div>
+			</div>
+		</div>
+	</div>
+	<div class="has-text-centered space">
+		Dont have an Account <a href="reguser.html">Sign Up</a>	
+	</div>
+
+
+</div>
+
+</body>
+</html>

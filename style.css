@@ -1,0 +1,13 @@
+
+.center-btn{
+
+display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.appear{display: none;}
+
+.appear_error{display: none;}
+
+.space{padding: 10px;}
