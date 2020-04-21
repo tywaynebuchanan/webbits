@@ -4,7 +4,6 @@
 	<title>Register User</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -25,6 +24,30 @@
 				</div>
 			</dir>
 		</section>
+
+	
+<div class="appear">
+		<div class="modal modal_pop">
+		  <div class="modal-background"></div>
+		  <div class="modal-card">
+		    <header class="modal-card-head">
+		      <p class="modal-card-title">Terms and Conditions</p>
+		      <button class="delete"aria-label="close" onclick="closeX()"></button>
+		    </header>
+		    <section class="modal-card-body">
+		     Hello World
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.
+
+
+		    </section>
+		    <footer class="modal-card-foot">
+		      <button class="button is-link" onclick="ClosePopUpbtn()">Close</button>
+		      
+		    </footer>
+		  </div>
+	</div>
+</div>
+
 		<div class="appear space" id="error_blank">
 			<article class="message is-danger">
   				<div class="message-header">
@@ -82,7 +105,6 @@
 					1 Upper Case letter
 					1 Lower Case letter
 					1 Numeric Digit 
-
 					</div>
 				</dir>
 
@@ -103,7 +125,7 @@
 			<div class="container space-1">
 				<label class="checkbox">
 	  			<input type="checkbox" id="checkbox">
-	  			I agree to the <a href="#">terms and conditions</a>
+	  			I agree to the <a onclick="modal_pop()" href="#" id="link">terms and conditions</a>
 				</label>
 			</div>
 
@@ -118,9 +140,6 @@
 				<progress class="progress is-link" id="progress" value="0" max="100">15%</progress>
 			</div>
 		</div>
-
-		
-
 			<div class="field">
 			  		<div class="control">
 						<a class="button is-fullwidth is-link is-medium is-rounded" data-badge="8" onclick="return RegValidate()">Register</a>
@@ -163,5 +182,12 @@
 	<div class="has-text-centered space">
 		Already have an Account? <a href="index.html">Sign In</a>	
 	</div>
+
+
+<script type="text/javascript">
+	
+	document.getElementById("link").addEventListener("click", PopUp);
+
+</script>
 </body>
 </html>

@@ -13,3 +13,13 @@ display: flex;
 .space{padding: 10px;}
 
 .space-1{padding: 5px;}
+
+.modal_pop {
+
+	display: flex;
+}
+
+.modal_close{
+
+	display: none;
+}

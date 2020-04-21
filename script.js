@@ -124,21 +124,27 @@ function RegValidate(){
 
 	function myfunction1(){
 		document.getElementById("error_name").style.display = "none";
-		document.getElementById("progress").value ="25";
+		document.getElementById("progress").value ="20";
 
 	}
 
 	function myfunction2(){
 		document.getElementById("error_email").style.display = "none";
-		document.getElementById("progress").value ="50";
+		document.getElementById("progress").value ="40";
 		
 	}
 	function myfunction3(){
 		document.getElementById("error_pwd").style.display = "none";
-		document.getElementById("progress").value ="75";
+		document.getElementById("progress").value ="60";
 		
 	}
 	function myfunction4(){
+		document.getElementById("error_lgt").style.display = "none";
+		document.getElementById("progress").value ="80";
+		
+	}
+
+	function myfunction5(){
 		document.getElementById("error_lgt").style.display = "none";
 		document.getElementById("progress").value ="100";
 		
@@ -151,6 +157,21 @@ function RegValidate(){
 
 	}
 
+	
+	function PopUp(){
+    document.querySelector(".appear").style.display = "flex";
+	}
+		
+
+	function closeX(){
+		document.querySelector(".appear").style.display = 'none';
+
+	}
+
+	function ClosePopUpbtn(){
+		document.querySelector(".appear").style.display = 'none';
+
+	}
 
 
 
