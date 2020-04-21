@@ -51,14 +51,16 @@ function RegValidate(){
 	var inputemail = document.getElementById("email");
 	var inputpwd = document.getElementById("pwd");
 	var inputcpwd = document.getElementById("con_pwd");
+	var checkbox = document.getElementById("checkbox");
 	var error_blank = document.getElementById("error_blank");
 	var error_1 = document.getElementById("error_name");
 	var error_2 = document.getElementById("error_email");
 	var error_3 = document.getElementById("error_pwd");
 	var error_4 = document.getElementById("error_lgt");
+	var error_checkbox = document.getElementById("error_checkbox");
 
 
-	if(!inputname.value && !inputemail.value && !inputpwd.value && !inputcpwd.value)
+	if(!inputname.value && !inputemail.value && !inputpwd.value && !inputcpwd.value && !checkbox.checked)
 	{
 		error_blank.style.display = 'inline';
 		return false;
@@ -91,14 +93,23 @@ function RegValidate(){
 		error_3.style.display = 'inline';
 		document.getElementById("con_pwd").value="";
 		return false;
+	} 
+
+	if(!checkbox.checked)
+	{
+		error_checkbox.style.display = 'inline';
+		return false;
 	
-	} else {
+	}else {
 		window.open('success.html');
+		
 		document.getElementById("name").value="";
   		document.getElementById("email").value="";
   		document.getElementById("pwd").value="";
   		document.getElementById("con_pwd").value="";
+  		document.getElementById("checkbox").checked = false;
   		document.getElementById("progress").value =0;
+  		error_blank.style.display = 'none';
 		
 	}
 

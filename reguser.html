@@ -28,7 +28,7 @@
 		<div class="appear space" id="error_blank">
 			<article class="message is-danger">
   				<div class="message-header">
-    				<p>Important1</p>
+    				<p>Important!</p>
     				<button class="delete pointer" aria-label="delete"  onclick="removeMessage()" ></button>
   					</div>
   					<div class="message-body">
@@ -37,6 +37,7 @@
     				<p><strong>Your Email Address</strong></p>
     				<p><strong>Password</strong></p>
     				<p><strong>Confirm Password</strong></p>
+    				<p><strong>Agreed to the Terms and Conditions</strong></p>
   				</div>
 			</article>
 		</div>
@@ -98,11 +99,27 @@
 				</dir>
 			</div>
 
+
+			<div class="container space-1">
+				<label class="checkbox">
+	  			<input type="checkbox" id="checkbox">
+	  			I agree to the <a href="#">terms and conditions</a>
+				</label>
+			</div>
+
+			<dir id = "error_checkbox" class ="appear">
+					<div class="notification is-danger">
+					You did not agree to the terms and conditions
+					</div>
+				</dir>
+
 			<div class="container">
 				<div class="space">Registration Progress
 				<progress class="progress is-link" id="progress" value="0" max="100">15%</progress>
 			</div>
 		</div>
+
+		
 
 			<div class="field">
 			  		<div class="control">
