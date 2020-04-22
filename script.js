@@ -173,6 +173,15 @@ function RegValidate(){
 
 	}
 
+	function ShowPassword(){
+		var text = document.getElementById("pwd");
+		if (text.type === "password") {
+    text.type = "text";
+  } else {
+    text.type = "password";
+  }
+	}
+
 
 
 
